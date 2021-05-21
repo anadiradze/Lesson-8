@@ -1,0 +1,76 @@
+.box {
+    height: 450px;
+    width: 100%;
+    position: relative;
+}
+button {
+    width: 250px;
+    padding: 10px;
+    background-color: #3C1053FF;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+.cover{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px; /* !!!!!!!!! */
+    left: 0px;
+    background-color: rgba(128, 50, 67, 0.1);
+    color: #fff;
+}
+.image-box{
+    height: 100%;
+    width: 100%;
+}
+.bg-wraper {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    color: #3C1053FF;
+
+    font-weight: bold;
+    }
+
+    /*--background image */
+.bg-image { 
+    background-image: url(image/bg2.jpg);
+    width: 100%;
+    height: 300px;
+    background-position:center; /* ფოტოს რომელი ნაწილი მინდა რომ ჩანდეს background-position: top left < ესეც შემიძლია მივუთითო. სიმაღლე რაც არ უნდა შევცვალო მაინც ცენტრალურ ნაწილს გამოაჩენს ისევ*/
+    background-size: cover; /* cover რომ მივუტითო ფოტოს არ გაამეორებს და გადაშლის მთლიანად შეავსებს კონტენტს მითითებული ზომების მიხედვით. contain - რომ მივუთითო შეავსებს გაწერილ ზომებს ოღონდ შეიძლება სურათი პატარა ზომის იქნება გაამეოროს ან თუ დიდი სურათი იქნება მოჭრას*/
+    background-repeat: no-repeat; /* თუ მივუთითებთ no-repeat მაშინ ფოტო არ განმეორდება. contaon + no repeat სურათს დატოვებს პატარას და ერთს. cover + no repeat სურათს გაშლის რაც არ უნდა პატარა ზომის იყოს მოცემული სიმაღლის და სიგანის მიხედვით  */
+
+    }
+.bg-wraper1 {
+    padding-top: 0.5%;
+
+}
+.title-h5 {
+    font-size: 25px;
+    transition-property: all ;    /* აქ ვწერ რა მინდა რომ შემეცვალოს მაუსის კურსორის მიტანაზე პირობითად, მაგ.:ბექგრაუნდის ფერი, ფონტის ზომა ან მივუთითებთ all-ს და რაც კი hover-ში მეწერება ყველაფერზე იმოქმედებს.*/
+    transition-delay: 0.5s;         /* რა დრო დასჭირდეს ამ ანიმაციების ასახვას,რამდენ ხანში დაიწყოს, transition-delay-ის გაწერა :hover-ის ქვეშ როცა ხდება, მიტანის დროს 5 მ/წმ-ის მერე აქტიურდება ანიმაცია, თუმცა როდესაც მაუსს მოვაშორებთ აღარ აღიქვამს და მაშინვე ქრება ყველა ანიმაცია. მაუსის მიტანამდეც და მიტანის შემდეგაც რო მუშაობდეს პირდაპირ კლასზე გავწეროთ ჯობია.*/
+    transition-duration: 0.5s;   /* რამდენი ხნით გაგრძელდეს ანიმაცია დაწყების შემდეგ*/
+    transition-timing-function: linear ; /*რამდენად სწრაფად/ნელა დაიწყოს და რამდენად სწრაფად/ნელა დამთავრდეს ანიმაცია. ძაან მცირეა განსხვავება ლინეარსა და სხვა რამეებს შორის*/
+    /* transition: all 0.3s linear 0.3s;      მოკლე ჩანაწერი წინა ოთხი ფუნქციის*/
+    
+}
+.title-h5:hover{ 
+    color: whitesmoke; 
+    background-color:rgba(163, 45, 45, 0.3);
+}
+.animation-block {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    animation-name: cube;
+    background-color: yellow;
+    animation-duration: 2s;
+}
+
+/* keyframe-ს ვიყენებთ მაშინ როდესაც გვინდა ანიმაცია გააქტიურდეს ჩატვირთვის დროს. ვარქმევ სახელს მაგ. cube და ვუწერ ანიმაციის დასაწყისში რა უნდა გააკეთოს და შემდეგ დასასრულში. */
+@keyframes cube {
+    from {top: 0px;}
+    to {top: 200px;}
+  }
